@@ -22,7 +22,7 @@
                         var control = myMap.controls.get('routePanelControl');
                         
                         control.routePanel.state.set({
-                            from: [result.geoObjects.position[0], result.geoObjects.position[1]],
+                            from: [{{f_x}}, {{f_y}}],
                             to: [{{m_x}}, {{m_y}}]
                         });
                     },

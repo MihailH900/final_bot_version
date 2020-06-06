@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from location_bot.views import index, cartGenerate, MessageView
+from location_bot.views import index, cartGenerate, generate_meet_point, MessageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('cartGenerate/', cartGenerate, name='cartGenerate'),
-    path('MessageView', MessageView.as_view(), name='MessageView')
+    path('generate_meet_point/', generate_meet_point, name='generate_meet_point'),
+    path('api/MessageView/', MessageView.as_view(), name='MessageView')
 ]
